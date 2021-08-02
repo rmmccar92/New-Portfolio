@@ -7,10 +7,15 @@ For this project we were asked to update our portfolio with various links and re
 -Adobe XD
 I had been hearing about this program for a while and wanted to use it as I was already familiar with other Adobe products and I think it is a great way to layout your site if you have access to it. An image of my initial design layout can be seen below.
 
-![Mock up of Design]()
+![Mock up of Design](https://github.com/rmmccar92/New-Portfolio/blob/main/assets/images/Mockup.png)
 
 
 And then the final running application can be seen here.
+
+![Hero Design](https://github.com/rmmccar92/New-Portfolio/blob/main/assets/images/Profile%20Hero%20Design.png)
+![Featured Section](https://github.com/rmmccar92/New-Portfolio/blob/main/assets/images/Profile%20Featured%20Section%20.png)
+![Other Work Section](https://github.com/rmmccar92/New-Portfolio/blob/main/assets/images/Profile%20Other%20Work%20Section.png)
+![About Me Section and Footer](https://github.com/rmmccar92/New-Portfolio/blob/main/assets/images/Profile%20About%20Me%20Section%20and%20Footer.png)
 
 
 
