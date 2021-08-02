@@ -13,6 +13,12 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+h1 , h2 , h3 , h4 , h5, h6 {
+    margin: 0;
+    padding: auto;
 }
 
 ul {
@@ -23,6 +29,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 p {
@@ -31,6 +38,7 @@ p {
 
 img {
     width: 100%;
+    height: auto;
 }
 
 .nav-container {
@@ -38,6 +46,7 @@ img {
     position: fixed;
     width: 100vw;
     height: 8em;
+    z-index: 2;
 }
 
 .nav-container ul a {
@@ -62,7 +71,6 @@ header {
 }
 
 .nav {
-    float: right;
     display: flex;
     padding-top: 0;
     
@@ -78,7 +86,8 @@ header {
     background-image: linear-gradient(to right, #000000, #111010, #1b1a1b, #252424, #302e2e, #3c3a3a, #484646, #555252, #666363, #777575, #898787, #9b9a9a); 
     margin: 0;
     padding-top: 6em;
-   border-bottom: solid black 2px;
+    padding-bottom: 6em;
+    border-bottom: solid black 2px;
 }
 
 .hero h1 {
@@ -95,8 +104,12 @@ header {
 }
 
 .hero-design {
+    width: 100%;
+    height: auto;
     margin-top: -8em;
     padding-left: 0.05em;
+    position: relative;
+    top: 6em
 }
 
 section {
@@ -114,12 +127,19 @@ section {
     font-size: 40px;
 }
 
+.portrait-container{
+    margin:0;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .portrait {
-    max-width: 16em;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     border: solid var(--accent-3)4px;
-    margin: 2.25em 3em 1em 8em;
-    height: auto;
 }
 
 .Bio {
@@ -128,14 +148,25 @@ section {
     text-align: justify;
 }
 
+.resume-link {
+    color: blue;
+}
+
 .Project-1 {
     display: flex;
     flex-wrap: wrap;
     padding: 1.5em 0.25em 1.5em 0.25em;
-    margin: 0 0 0 0;
     background: var(--accent-2);
     border-top: var(--accent) solid 3px;
     border-bottom: var(--accent) solid 3px;
+}
+
+.p1-content {
+    margin:0;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .p1-head {
@@ -144,7 +175,7 @@ section {
     padding: 0 0 0 0.5em;
     font-size: 60px;
     color: var(--accent-3);
-    -webkit-text-stroke: 2px black
+    
 }
 
 .p-title{
@@ -153,7 +184,7 @@ section {
     font-weight: bold;
     padding: 0 0 0 1.75em;
     color: var(--accent-4);
-    -webkit-text-stroke: 1px black;
+    
 }
 
 .left {
@@ -169,17 +200,24 @@ section {
     text-align-last: center;
     font-weight: bold;
     padding: 4em 1em 4em 1em;
-    margin: 1em 1.5em 1em 1.5em;
+    margin: 1em 0em 1em 0.5em;
     background: var(--accent-4);
-    border-radius: 6px;
+    border-radius: 10px;
     border: black solid 4px;
+}
+
+.p1-image-container {
+    margin-left: 2em;
+    max-width: 24em;
+    position: relative;
+    top: 1.25em;
 }
 
 .p1-image {
     border: solid var(--accent-4) 3px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
-    margin: 1em;
 }
 
 
@@ -189,6 +227,10 @@ section {
     padding: 1.5em;
     color: white;
     text-align: center;
+}
+
+.ow-1-title{
+    margin-bottom: 0;
 }
 
 .other-work h2 {
@@ -211,7 +253,6 @@ section {
 }
 
 .other-work li{
-    height: 15.75em;
     background: var(--accent-3);
     border-radius: 15px;
     padding: 1.75em 1.5em 3em 1.5em ;
@@ -225,7 +266,10 @@ section {
 }
 
 .container-2 {
-    padding-bottom: 0.2em;
+    padding-bottom: 1.4em;
+}
+.container-3 {
+    padding-bottom: 1.4em;
 }
 
 .other-work h4 {
@@ -240,9 +284,6 @@ section {
     height: auto;
 }
 
-.ow-1-title {
-    margin: 0 0 1em 0 ;
-}
 
 .ow-2-title, .ow-3-title {
     margin: 0;
@@ -279,24 +320,165 @@ section {
 .footer-image{
     display: none;
 }
-/* First Breakpoint */
+
+@media screen and (max-width: 600px) {
+    .nav-container{
+        font-size: .5em;
+        margin: 0;
+    }
+
+    .hero-design{
+        display: none;
+    }
+
+
+    .nav-container ul a{
+        font-size: .5em;
+        text-align: center;
+    }
+
+   .content{
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: column;
+       justify-content: center;
+       align-content: center;
+       font-size: .5em;
+   }
+
+   .hero h1 {
+       font-size: 6em;
+       text-align: center;
+       margin: 0;
+       padding: auto;
+   }
+
+   .subtitle{
+       font-size: 4em;
+       margin: 0;
+       padding: auto
+   }
+
+   .description-box{
+       margin: 0;
+       padding: auto;
+       text-align: center;
+       font-size: .75em;
+   }
+
+   .p1-image-container{
+       margin: 0;
+       padding: auto;
+       position: relative;
+       right: 0.25em
+   }
+
+   .other-work{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       flex-wrap: wrap;
+     }
+
+     .ow-head{
+         font-size: 1em;
+     }
+
+     .other-work ul {
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: column;
+     }
+
+     .about-me {
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: column;
+         justify-content: center;
+     }
+
+     .am-head{
+         margin: 0.2em;
+         padding: auto;
+         text-align: center;
+     }
+
+     .left{
+         width: 100%;
+     }
+
+   
+
+     .portrait-container{
+         justify-content: flex-start;
+         margin: .5em;
+         position: relative;
+         right: 4em;
+     }
+
+     .Bio {
+         text-align: center;
+         margin: 0;
+         padding: auto;
+     }
+}
+
+@media screen and (max-width: 799px){
+    .name {
+        font-size: 2.25em;
+        margin-top: .4em;
+    }
+
+ 
+
+    .hero-design {
+        position: relative;
+        top: 7em;
+    }
+
+    .p1-content{
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .ow-1-title{ 
+        margin-top: 0;
+    }
+
+
+    .description-box{
+        width: 90%;
+    }
+    
+
+    .portrait-container{
+        position: relative;
+        left: 4em;
+    }
+
+}
+
+
 @media screen and (min-width: 1000px){
     .hero-design {
         max-width: 20em;
     }
 
+    .p1-image-container{
+        margin-right: 2em;
+    }
+
    .description-box{
        padding: 2em 2em 2em 2em;
        font-size: 1.15em;
+       font-weight: unset;
     }
 
-    .p1-image{
-        max-height: 21.25em;
-    }
 
     .footer-image{
         display: unset;
-    
         position: relative;
         bottom: 8em;
     }
@@ -307,41 +489,29 @@ section {
 
 }
 
+
 @media screen and (min-width: 1200px) {
  .portrait{
      max-width: 20em;
      margin-left: 10em;
  }
  
- .Bio{
-     font-size: 1.15em;
- }
+.ow-1-title{
+    margin-bottom: 0;
+}
  
 }
 
-/* Third Breakpoint */
 @media screen and (min-width: 1350px) {
 
-    .p1-image{
-        width: 100%;
-       
-        max-width: 32em;
-        margin-left: 2em;
-
-    }
-
     .description-box{
-        padding: 4em 1em 4em 1em;
+        padding: 2em 2em 2em 2em;
         font-size: 1.25em;
     }
    
     
     .other-work li{
         padding: 6em 2em 6em 2em;
-    }
-
-    .ow-1-title{
-        margin-bottom: 0;
     }
 
     .footer-image{
@@ -355,3 +525,123 @@ section {
         bottom: 4em;
     }
 }
+
+@media screen and (min-width: 1400px){
+    .hero-design{
+        margin-left: 6em;
+        max-width: 22em;
+    }
+
+}
+
+@media screen and (min-width: 1900px){
+    .hero h1 {
+        font-size: 10em;
+        padding-top: 0.5em;
+    }
+
+    .subtitle{
+        font-size: 4.5em;
+        padding: 0.25em 0em 0em 2.5em;
+        margin-bottom: 5.75em;
+    }
+
+    .hero-design{
+        padding: 0;
+        margin: 0;
+    }
+
+    .Project-1{
+       padding: 0 1em 0 1em;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .p-title {
+        position: relative;
+        right: 30em
+    }
+
+    .description-box {
+        font-size: 1.5em;
+        padding: 2em;
+        margin: 1em 10em 1em 12em;
+        font-weight: unset;
+    
+    }
+
+    .p1-image-container{
+        display: flex;
+        margin: 8em;
+        padding: 1em;
+        position: relative;
+        right: 20em;
+    }
+
+    .p1-image{
+        width: 40em;
+    }
+
+    .p1-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (min-width: 4000px){
+    .hero{
+        font-size: 5em;
+    }
+
+    .hero-design{
+        width: 100%;
+        height: auto;
+    }
+
+    .p1-head{
+        font-size: 20em;
+      
+    }
+
+    .Project-1{
+        font-size: 2em;
+       
+    }
+
+    .p1-content {
+        justify-content: space-evenly;
+    }
+
+    .p-title{
+        font-size: 6em;
+        width: 100%;
+        position: relative;
+        right: 7.75em;
+        padding: 0;
+    }
+
+    .description-box{
+        border-radius: 2em;
+        max-width: 16em;
+        font-size: 2.5em;
+        position: relative;
+        right: 8em;
+    }
+
+    .p1-image-container{
+        position: unset;
+    }
+    .image-container{
+        max-width: 50%;
+    }
+
+    .other-work img {
+        width: 100%;
+    }
+
+    body .other-work img {
+        width: 25%;
+    }
+}
+
