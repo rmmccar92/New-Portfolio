@@ -523,6 +523,7 @@ section {
         position: relative;
         left: 30em;
         bottom: 4em;
+        z-index: 2;
     }
 }
 
